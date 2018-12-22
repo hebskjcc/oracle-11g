@@ -8,6 +8,7 @@ trap "echo_red '******* Caught SIGINT signal. Stopping...'; exit 2" SIGINT
 deps () {
 
 	echo "Installing dependencies"
+	yum -y update
 	yum -y install binutils compat-libstdc++-33 compat-libstdc++-33.i686 ksh elfutils-libelf elfutils-libelf-devel glibc glibc-common glibc-devel gcc gcc-c++ libaio libaio.i686 libaio-devel libaio-devel.i686 libgcc libstdc++ libstdc++.i686 libstdc++-devel libstdc++-devel.i686 make sysstat unixODBC unixODBC-devel
 	yum clean all
 	rm -rf /var/lib/{cache,log} /var/log/lastlog
