@@ -3,6 +3,7 @@
 set -e
 source /assets/colorecho
 source ~/.bashrc
+
 alert_log="$ORACLE_BASE/diag/rdbms/alert_$ORACLE_SID.log"
 listener_log="$ORACLE_BASE/diag/tnslsnr/listener.log"
 pfile=$ORACLE_HOME/dbs/init$ORACLE_SID.ora
@@ -20,6 +21,8 @@ trap_db() {
 
 start_db() {
 	echo_yellow "Starting listener..."
+	touch alert_log
+	touch listener_log
 	monitor $listener_log listener &
 	lsnrctl start | while read line; do echo -e "lsnrctl: $line"; done
 	MON_LSNR_PID=$!
