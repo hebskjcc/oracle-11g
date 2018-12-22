@@ -522,7 +522,7 @@ STORAGETYPE=FS
 # Default value : "US7ASCII"
 # Mandatory     : NO
 #-----------------------------------------------------------------------------
-CHARACTERSET="AL32UTF8"
+CHARACTERSET="ZHS16GBK"
 
 #-----------------------------------------------------------------------------
 # Name          : NATIONALCHARACTERSET
@@ -817,7 +817,7 @@ TEMPLATENAME = "New Database"
 # Default value : None
 # Mandatory     : Yes
 #-----------------------------------------------------------------------------
-GDBNAME = "orcl11.us.oracle.com"
+GDBNAME = "orcl.us.oracle.com"
 
 #-----------------------------------------------------------------------------
 # Name          : SCRIPTDESTINATION
@@ -1058,7 +1058,7 @@ GDBNAME = "orcl11.us.oracle.com"
 # Default value : None
 # Mandatory     : Yes
 #-----------------------------------------------------------------------------
-DB_UNIQUE_NAME = "orcl11c.us.oracle.com"
+DB_UNIQUE_NAME = "orcl.us.oracle.com"
 
 #-----------------------------------------------------------------------------
 # Name          : INSTANCENAME
