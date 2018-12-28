@@ -16,7 +16,5 @@ fi
 	cat /assets/profile >> ~oracle/.bash_profile
 	cat /assets/profile >> ~oracle/.bashrc
 	
-	cat /assets/profile >> ~root/.bash_profile
-	cat /assets/profile >> ~root/.bashrc
 su oracle -c "/assets/entrypoint_oracle.sh"
 
