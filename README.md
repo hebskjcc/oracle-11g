@@ -1,4 +1,8 @@
-
+	groupadd -g 200 oinstall
+	groupadd -g 201 dba
+	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle
+	echo "oracle:install" | chpasswd
+	chown -R oracle:oinstall /opt/oracle
 
 docker run --privileged --name oracle11g -p 1521:1521 -v <install_folder>:/install jaspeen/oracle-11g
 ```
