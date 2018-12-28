@@ -31,9 +31,6 @@ users () {
 	cat /assets/profile >> ~oracle/.bash_profile
 	cat /assets/profile >> ~oracle/.bashrc
 	
-	cat /assets/profile >> ~root/.bash_profile
-	cat /assets/profile >> ~root/.bashrc
-
 }
 
 sysctl_and_limits () {
