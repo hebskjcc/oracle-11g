@@ -1,12 +1,17 @@
-export ORACLE_BASE=/opt/oracle/app
 export ORACLE_SID=orcl
-export ORACLE_HOME=$ORACLE_BASE/product/11.2.0/dbhome_1
-export ORACLE_INVENTORY=/opt/oracle/oraInventory
-export PATH=$PATH:$ORACLE_BASE/bin
-export PATH=/usr/sbin:$PATH
-export PATH=$ORACLE_HOME/bin:$PATH
-export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib
-export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib
-export NLS_DATE_FORMAT="YYYY-MM-DD HH24:MI:SS"
-export ORACLE_HOME_LISTNER=$ORACLE_HOME
-export ORACLE_HOSTNAME=database
+export ORACLE_BASE=/opt/oracle/app
+export ORACLE_HOME=/opt/oracle/app/product/11.2.0/dbhome_1
+export NLS_LANG="american_america.ZHS16GBK"
+export NLS_DATE_FORMAT="YYYY-MM-DD HH24:Mi:SS"
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib
+export PATH=$ORACLE_HOME/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oracle/bin
+echo "--------------------------"
+echo "ORACLE_BASE"=$ORACLE_BASE
+echo "ORACLE_HOME"=$ORACLE_HOME
+echo "ORACLE_SID"=$ORACLE_SID
+echo "--------------------------"
+echo "NLS_LANG"=$NLS_LANG
+echo "NLS_DATE_FORMAT"=$NLS_DATE_FORMAT 
+echo "LD_LIBRARY_PATH"=$LD_LIBRARY_PATH 
+echo "PATH"=$PATH
+echo "--------------------------"
