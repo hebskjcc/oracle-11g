@@ -3,7 +3,7 @@
 	groupdel dba
 	groupadd -g 200 oinstall
 	groupadd -g 201 dba
-	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle -s /bin/bash -m
+	useradd -u 440 -g oinstall -G dba -d /home/oracle oracle -s /bin/bash -m
 	echo "oracle:install" | chpasswd
 	chown -R oracle:oinstall /opt/oracle
 
