@@ -4,7 +4,7 @@ export ORACLE_HOME=/opt/oracle/app/product/11.2.0/dbhome_1
 export NLS_LANG="SIMPLIFIED CHINESE_CHINA.ZHS16GBK"
 export NLS_DATE_FORMAT="YYYY-MM-DD HH24:Mi:SS"
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib
-export PATH=$ORACLE_HOME/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oracle/bin
+export PATH=$PATH:$ORACLE_HOME/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/oracle/bin
 echo "--------------------------"
 echo "ORACLE_BASE"=$ORACLE_BASE
 echo "ORACLE_HOME"=$ORACLE_HOME
