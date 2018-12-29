@@ -1,6 +1,9 @@
+	rmuser -r -f oracle 
+	groupdel oinstall
+	groupdel dba
 	groupadd -g 200 oinstall
 	groupadd -g 201 dba
-	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle
+	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle -s /bin/bash -m
 	echo "oracle:install" | chpasswd
 	chown -R oracle:oinstall /opt/oracle
 

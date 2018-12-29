@@ -20,7 +20,7 @@ users () {
 	echo "Configuring users"
 	groupadd -g 200 oinstall
 	groupadd -g 201 dba
-	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle
+	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle -s /bin/bash -m
 	echo "oracle:install" | chpasswd
 	echo "root:install" | chpasswd
 	sed -i "s/pam_namespace.so/pam_namespace.so\nsession    required     pam_limits.so/g" /etc/pam.d/login
@@ -31,9 +31,6 @@ users () {
 	cat /assets/profile >> ~oracle/.bash_profile
 	cat /assets/profile >> ~oracle/.bashrc
 	
-	cat /assets/profile >> ~root/.bash_profile
-	cat /assets/profile >> ~root/.bashrc
-
 }
 
 sysctl_and_limits () {
