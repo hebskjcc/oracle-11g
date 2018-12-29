@@ -36,7 +36,7 @@ users () {
 sysctl_and_limits () {
 
 	cp /assets/sysctl.conf /etc/sysctl.conf
-	sysctl –p
+	sysctl -p
 	cat /assets/limits.conf >> /etc/security/limits.conf
 
 }
