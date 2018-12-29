@@ -20,7 +20,7 @@ users () {
 	echo "Configuring users"
 	groupadd -g 200 oinstall
 	groupadd -g 201 dba
-	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle
+	useradd -u 440 -g oinstall -G dba -d /opt/oracle oracle -s /bin/bash -m
 	echo "oracle:install" | chpasswd
 	echo "root:install" | chpasswd
 	sed -i "s/pam_namespace.so/pam_namespace.so\nsession    required     pam_limits.so/g" /etc/pam.d/login
